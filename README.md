@@ -11,17 +11,18 @@ https://github.com/stgl/poly3d
 
 The primary `poly3d` and `poly3d_omp` manual is [Thomas, 1993](http://searchworks.stanford.edu/view/2830996). It covers the details of the boundary value problems behind `poly3d` and explains the input and output file formats.
 
-### Compiling `poly3d_omp`
+### Compiling `poly3d_omp` and Dependencies
 
-This version of `poly3d` has been tested and modified under Ubuntu Linux using 
-`gcc` 13.3.0
-`OpenBLAS` 0.3.26
-`OpenMP` 4.5
-On Ubuntu, before compiling `poly3d_omp` you will likely need to install OpenBLAS using the command `sudo apt install libopenblas-dev` to get the fully parallelized solver. 
+This version of `poly3d_omp` has been compiled and tested only in Ubuntu Linux. On Ubuntu, before compiling `poly3d_omp` you will likely need to install some dependencies to enable full parallelization.  
+On Ubuntu, the command below should work
+`sudo apt install libomp-dev liblapack-dev libopenblas-dev `
 
-The makefile provided here assumes you are using a recent version of `gcc`, the GNU Compiler Collection and running Ubuntu Linux. The makefile has not been tested in Mac OS, but should theoretically work provided your system has `gcc`, `OpenMP`, and `OpenBLAS` installed and available.
+On Mac OS, using `brew` the install command below may work (unverified)
+`brew install openblas lapack libomp`
 
-`poly3d_omp` requires several flags, so a makefile is provided. Note that like `poly3d`, `poly3d_omp` must be compiled with the `-O2` flag. Over-optimization (e.g. `-O3` or `-ffast-math`) can lead to unpredictable numerical errors and large singularities in the resulting displacement fields. Just say no!
+The makefile provided here assumes you are using a recent version of `gcc`, the GNU Compiler Collection and running Ubuntu Linux. The makefile has not been tested in Mac OS, but should theoretically work provided your system has `gcc`, and the dependencies listed above installed and available.
+
+`poly3d_omp` requires several flags, so a makefile is provided. Note that like `poly3d`, `poly3d_omp` must be compiled with the `-O2` flag. Over-optimization (e.g. `-O3` or `-ffast-math`) can lead to unpredictable numerical errors and large singularities in the resulting displacement fields.
 
 ### A Warning About CPU Usage and Temperatures
 
