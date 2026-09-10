@@ -11,7 +11,7 @@ https://github.com/stgl/poly3d
 
 The primary `poly3d` and `poly3d_omp` manual is [Thomas, 1993](http://searchworks.stanford.edu/view/2830996). It covers the details of the boundary value problems behind `poly3d` and explains the input and output file formats.
 
-### Compiling `poly3d_omp` and Dependencies
+### Dependencies and Compiling `poly3d_omp`
 
 This version of `poly3d_omp` has been compiled and tested only in Ubuntu Linux. On Ubuntu, before compiling `poly3d_omp` you will likely need to install some dependencies to enable full parallelization.<br>
 
