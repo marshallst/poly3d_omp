@@ -13,9 +13,10 @@ The primary `poly3d` and `poly3d_omp` manual is [Thomas, 1993](http://searchwork
 
 ### Compiling `poly3d_omp` and Dependencies
 
-This version of `poly3d_omp` has been compiled and tested only in Ubuntu Linux. On Ubuntu, before compiling `poly3d_omp` you will likely need to install some dependencies to enable full parallelization.  
-On Ubuntu, the command below should work.<br>
-`sudo apt install libomp-dev liblapack-dev libopenblas-dev`<br>
+This version of `poly3d_omp` has been compiled and tested only in Ubuntu Linux. On Ubuntu, before compiling `poly3d_omp` you will likely need to install some dependencies to enable full parallelization.<br>
+
+On Ubuntu, the command below should install the dependencies needed to build `poly3d_omp`.<br>
+`sudo apt install build-essential libomp-dev liblapack-dev libopenblas-dev`<br>
 
 On Mac OS, using `brew` the install command below may work (unverified).<br>
 `brew install openblas lapack libomp`<br>
