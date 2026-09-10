@@ -49,7 +49,7 @@ Please cite this thesis and related publications if you use `poly3d` or `poly3d_
 
 Thomas, A. L., 1993, Poly3D: A three-dimensional, polygonal element, displacement discontinuity boundary element computer program with applications to fractures, faults, and cavities in the Earth's crust (M.S. Thesis, Stanford University).
 
-To see a recent example of `poly3d` in active tectonics research, see [this 2022 paper by Devine, Harper, and Marshall]([https://doi.org/10.1785/0220220182]) on `poly3d` calculated slip rates and distibutions along faults in southern California.
+To see a recent example of `poly3d` in active tectonics research, see [this 2022 paper by Devine, Harper, and Marshall](https://doi.org/10.1785/0220220182) on `poly3d` calculated slip rates and distibutions along faults in southern California.
 
 ### Contact
 Please [open an issue](https://github.com/marshallst/poly3d_omp/issues/new) if you have a question.
