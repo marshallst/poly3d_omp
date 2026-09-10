@@ -1,8 +1,11 @@
 # poly3d_omp
 `poly3d_omp` is a parallelized fork of the Poly3D Boundary Element Method (BEM) code for 3D fault and fracture modeling. `poly3d_omp` is upgraded from the original C implementation (Thomas, 1993) using OpenMP for multi-threading, OpenBLAS for parallelized linear algebra, and LLM-assisted refactoring. The usage and mathematics of the code is otherwise unchanged from the original `poly3d`. For details of these changes, see the included `poly3d.c` and refer to the revision history section at the top of the code. This repository builds on the original open source code for poly3d, a Boundary Element Method program first released in the M.S. thesis by Andrew Thomas, 1993. Parallelization and implementation of the OpenBLAS solver has dramatically improved performance, so the goal here is to share this code in the hopes that it is useful to others for structural geology, geomechanics, and active tectonics research. 
 
+The source code posted here includes a sample model for testing and validation purposes 800elts.in and 800elts.out.
+
 The original `poly3d` open source code and documentation (reproduced in modified form below) is currently available on github at
 https://github.com/stgl/poly3d
+
 
 ## Documentation
 
