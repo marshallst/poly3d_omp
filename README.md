@@ -6,14 +6,13 @@ The source code posted here includes a sample model for testing and validation p
 The original `poly3d` open source code and documentation (reproduced in modified form below) is currently available on github at
 https://github.com/stgl/poly3d
 
-
 ## Documentation
 
 The primary `poly3d` and `poly3d_omp` manual is [Thomas, 1993](http://searchworks.stanford.edu/view/2830996). It covers the details of the boundary value problems behind `poly3d` and explains the input and output file formats.
 
-### Dependencies and Compiling `poly3d_omp`
+### Dependencies
 
-This version of `poly3d_omp` has been compiled and tested only in Ubuntu Linux. On Ubuntu, before compiling `poly3d_omp` you will likely need to install some dependencies to enable full parallelization.<br>
+On Ubuntu, before compiling `poly3d_omp` you will likely need to install some dependencies to enable full parallelization.<br>
 
 On Ubuntu, the command below should install the dependencies needed to build `poly3d_omp`.<br>
 `sudo apt install build-essential libomp-dev liblapack-dev libopenblas-dev`<br>
@@ -21,9 +20,14 @@ On Ubuntu, the command below should install the dependencies needed to build `po
 On Mac OS, using `brew` the install command below may work (unverified).<br>
 `brew install openblas lapack libomp`<br>
 
-The makefile provided here assumes you are using a recent version of `gcc`, the GNU Compiler Collection and running Ubuntu Linux. The makefile has not been tested in Mac OS, but should theoretically work provided your system has `gcc`, and the dependencies listed above installed and available.
+### Compiling `poly3d_omp`
+This version of `poly3d_omp` has been compiled and tested only on Ubuntu Linux. The makefile provided here assumes you are using a recent version of `gcc`, the GNU Compiler Collection and running Ubuntu Linux. The makefile has not been tested in Mac OS, but should theoretically work provided your system has `gcc`, and the dependencies listed above installed and available.
 
-`poly3d_omp` requires several flags, so a makefile is provided. Note that like `poly3d`, `poly3d_omp` must be compiled with the `-O2` flag. Over-optimization (e.g. `-O3` or `-ffast-math`) can lead to unpredictable numerical errors and large singularities in the resulting displacement fields.
+`poly3d_omp` requires several flags, so a makefile is provided. Note that like `poly3d`, `poly3d_omp` must be compiled with the `-O2` flag. Over-optimization (e.g. `-O3` or `-ffast-math`) can lead to unpredictable numerical errors and large singularities in the resulting displacement fields.<br>
+
+To build `poly3d_omp` simply browse to the directory with the code and makefile and type<br>
+`make`<br>
+This will compile `poly3d_omp`
 
 ### A Warning About CPU Usage and Temperatures
 
